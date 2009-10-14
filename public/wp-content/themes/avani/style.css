@@ -1,10 +1,10 @@
 /*
-Theme Name: WordPress Default
+Theme Name: Avani Theme Default
 Theme URI: http://wordpress.org/
-Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Description: Avani customized theme based off the default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
 Version: 1.6
-Author: Michael Heilemann
-Author URI: http://binarybonsai.com/
+Author: Michael Heilemann (modified by Rick Bradley)
+Author URI: http://www.rickbradley.com/
 Tags: blue, custom header, fixed width, two columns, widgets
 
 	Kubrick v1.5
@@ -42,49 +42,152 @@ body {
 	font-size: 9px;
 	color: #000000;
 }
+
 .nav {
 	margin-top: 1px;
 	line-height: 8px;
 }
-a.menu {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+
+/* main menu */
+.menubar {
+	width: 572px;
+	height: 30px;
+	position:relative;
+	top:25px;
+	left: 1px;
+}
+
+.menubar ul {
+	position:absolute;
+  top:-20px;
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 5px;
+}
+
+.menubar ul li {
+  display: inline;
+	width: 80px;
+	height: 30px;
+	float: left;
+	text-align: center; 
+	vertical-align: text-bottom;
+  text-transform: lowercase;
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;	
+	font-weight: bold;
+	font-style: italic;
+}
+
+.menubar ul li.page_item a {
 	color: #f18746;
 	text-decoration: none;
-	font-weight: bold;
-	font-style: italic;
 	border-bottom:0px;
 }
-a.menu:hover {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+
+.menubar ul li.page_item a:hover {
 	color: #983906;
+}
+
+.menubar ul li.current_page_item a {
+	color: #983906;
+}
+
+.menubar ul li.current_page_item a:hover {
+	color: #983906;
+}
+
+/* hide rendered submenus (as we need to format the submenus completely separately) */
+.menubar ul li ul {
+  display: none;
+}
+
+
+/* sub-menus */
+
+/* main menu */
+.submenubar {
+	width: 572px;
+	height: 30px;
+	position:relative;
+	top:25px;
+	left: 1px;
+}
+
+.submenubar ul {
+	position:absolute;
+	display: inline;
+  top:-20px;
+  list-style: none;
+  padding-left: 0px;
+  margin-bottom: 5px;
+}
+
+.submenubar ul li {
+  display: inline;
+	width: 80px;
+	height: 30px;
+	float: left;
+	text-align: center; 
+	vertical-align: text-bottom;
+  text-transform: lowercase;
+  font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;	
+	font-weight: bold;
+	font-style: italic;
+}
+
+.submenubar ul li a {
+  display: none;
+}
+
+.submenubar ul li ul li a {
+  display: inline;
+}
+
+.submenubar ul li ul {
+	width: 572px;
+	height: 20px;
+	position:absolute;
+	top:10px;
+	left: -5px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #8E6D57;
 	text-decoration: none;
 	font-weight: bold;
-	font-style: italic;
-	text-transform: lowercase;
 	border-bottom:0px;
 }
-a.menuselected {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #983906;
-	text-decoration: none;
-	font-weight: bold;
-	font-style: italic;
-	border-bottom:0px;
+
+/* these submenus aren't even visible from the current page */
+.submenubar ul li.page_item ul {
+  display: none;
 }
-a.menuselected:hover {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #983906;
-	text-decoration: none;
-	font-weight: bold;
-	font-style: italic;
-	text-transform: lowercase;
-	border-bottom:0px;
+
+/* but these submenus should be visible from the current page */
+.submenubar ul li.current_page_item ul {
+  display: block;
 }
-a.submenu {
+
+.submenubar ul li.current_page_ancestor ul {
+  display: block;
+}
+
+/* but these submenus should be visible from the current page */
+.submenubar ul li.current_page_item ul li {
+  width: 90px;
+  margin: 5px;
+  padding: 0px;
+}
+
+.submenubar ul li.current_page_ancestor ul li {
+  width: 90px;
+  margin: 5px;
+  padding: 0px;
+}
+
+/* visible but un-selected */
+.submenubar ul li.current_page_item ul li.page_item a {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #327898;
@@ -93,24 +196,13 @@ a.submenu {
 	text-transform: lowercase;
 	border-bottom:0px;
 }
-a.submenu:hover {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+
+.submenubar ul li.current_page_item ul li.page_item a:hover {
 	color: #983906;
-	text-decoration: none;
-	font-weight: bold;
-	border-bottom:0px;
 }
-a.submenuselected{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #983906;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: lowercase;
-	border-bottom:0px;
-}
-a.submenuselected:hover{
+
+/* visible and current */
+.submenubar ul li.current_page_item ul li.current_page_item a {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #983906;
@@ -119,6 +211,26 @@ a.submenuselected:hover{
 	text-transform: lowercase;
 	border-bottom:0px;
 }
+
+.submenubar ul li.current_page_item ul li.current_page_item a:hover {
+}
+
+/* sitemap, etc. */
+menubar ul li a.navigation {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #327898;
+	text-decoration: none;
+	border-bottom:0px;
+}
+menubar ul li a.navigation:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #327898;
+	text-decoration: none;
+	border-bottom:0px;
+}
+
 a {
 	color: #327898;
 	text-decoration: none;
@@ -129,7 +241,6 @@ a:hover {
 	text-decoration:none;
 	border-bottom:1px dotted #D96925;
 }
-
 .divider {
 }
 caption {
@@ -157,20 +268,7 @@ th.annual {
 	margin-top: 0px;
 	text-align:justify;
 }
-a.navigation {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #327898;
-	text-decoration: none;
-	border-bottom:0px;
-}
-a.navigation:hover {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #327898;
-	text-decoration: none;
-	border-bottom:0px;
-}
+
 p {
 	margin: 15px 0px;
 }
@@ -178,12 +276,15 @@ p {
 	float:right;
 	margin-left:25px;
 	margin-top:3px;
+	margin-bottom: 15px;
 }
 .imgleft {
 	float:left;
 	margin-right:25px;
 	margin-top:3px;
+	margin-bottom: 15px;
 }
+
 .header {
 	font-family: Times, serif;
 	font-size: 16px;
@@ -214,12 +315,14 @@ p {
 	font-style: normal;
 	
 }
+
 .content {
 	margin-right: 25px;
 	margin-top: 10px;
 }
+
 ul {
-	list-style-image:url(images/bullet.gif);
+	list-style-image:url(/images/bullet.gif);
 }
 li {
 	margin-left:-10px;
@@ -227,6 +330,7 @@ li {
 	font-size: 10px;
 	color: #000000;
 }
+
 .prodleft {
 	margin: 0px;
 	padding-top: 20px;
@@ -262,77 +366,6 @@ li {
 	border:1px solid #327898;
 }
 
-.about {
-	position:absolute;
-	left:0px;
-	top:15px;
-	height: 30px;
-	width: 50px;
-}
-.news {
-	position:absolute;
-	left:75px;
-	height: 30px;
-	width: 50px;
-	text-align: center;
-}
-.renewable {
-	position:absolute;
-	left:140px;
-	height: 30px;
-	width: 100px;
-	text-align: center;
-}
-.water {
-	position:absolute;
-	left:236px;
-	width: 100px;
-	height: 30px;
-	text-align: center;
-}
-.farm {
-	position:absolute;
-	left:343px;
-	width: 100px;
-	height: 30px;
-	text-align: center;
-}
-.textiles {
-	position:absolute;
-	text-align: center;
-	left:439px;
-	top:15px;
-	width: 60px;
-	height: 30px;
-}
-
-.products {
-	position:absolute;
-	text-align: center;
-	right:0px;
-	top:15px;
-	width: 60px;
-	height: 30px;
-}
-.menubar {
-	width: 572px;
-	height: 30px;
-	position:relative;
-	top:25px;
-	left: 1px;
-}
-.submenubar {
-	width: 572px;
-	height: 20px;
-	position:relative;
-	top:32px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 9px;
-	color: #8E6D57;
-	text-decoration: none;
-	font-weight: bold;
-	border-bottom:0px;
-}
 table.product{
 	border-bottom:1px solid #FFFFFF;
 	border-collapse:collapse;
