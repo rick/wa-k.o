@@ -19,7 +19,7 @@ Tags: blue, custom header, fixed width, two columns, widgets
 */
 
 body {
-	background-image: url(img/bg4.gif);
+	background-image: url(images/bg4.gif);
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
@@ -219,7 +219,7 @@ p {
 	margin-top: 10px;
 }
 ul {
-	list-style-image:url(img/bullet.gif);
+	list-style-image:url(images/bullet.gif);
 }
 li {
 	margin-left:-10px;
