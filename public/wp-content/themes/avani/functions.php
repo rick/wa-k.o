@@ -15,6 +15,23 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
+function sitemap_area($title = '') {
+  ?>
+  <tr> 
+    <td valign="top">
+      <div class="header">
+        <?php if($title) { echo $title; } else { the_title(); } ?>
+      </div> 
+      <div class="nav">
+        <a href="sitemap.htm" class="navigation">sitemap</a>
+        <span class="sitemapdivider">:</span> 
+        <a class="navigation" href="#">about us</a>
+      </div> 
+      <div class="content">
+		<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
+  <?php
+}
+
 /** @ignore */
 function kubrick_head() {
 	$head = "<style type='text/css'>\n<!--";
