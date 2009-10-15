@@ -97,11 +97,13 @@ body {
 	color: #983906;
 }
 
-/* hide rendered submenus (as we need to format the submenus completely separately) */
-.menubar ul li ul {
-  display: none;
+.menubar ul li.current_page_parent a {
+	color: #983906;
 }
 
+.menubar ul li.current_page_parent a:hover {
+	color: #983906;
+}
 
 /* sub-menus */
 
