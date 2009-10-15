@@ -8,7 +8,9 @@ get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <?php sitemap_area($post); ?>
+  <div class="content">
   <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
+  </div>
 <?php endwhile; endif; ?>
 
 
