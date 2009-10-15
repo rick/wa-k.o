@@ -33,10 +33,20 @@
                       <?php wp_list_pages('sort_column=menu_order&title_li=&depth=1'); ?>
                     </ul>
                   </div> 
-                  <div class="submenubar"> 
-                    <ul>
-                      <?php wp_list_pages('sort_column=menu_order&title_li='); ?>
-                    </ul>
+                  <div class="menubar submenubar"> 
+                    <?php
+                      print_r($parent);
+                      if($post->post_parent) {
+                        $parent = get_post($post->post_parent, ARRAY_A);
+                        if ($parent['post_title'] != 'Products')
+                          $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+                      } else {
+                        if ($post->post_title != 'Products')
+                          $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+                      }
+                      if ($children) { ?>
+                        <ul><?php echo $children; ?></ul><?php 
+                      } ?>
                   </div> 
                 </td>
               </tr> 

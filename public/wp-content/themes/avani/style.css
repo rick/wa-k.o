@@ -112,113 +112,18 @@ body {
 	width: 572px;
 	height: 30px;
 	position:relative;
-	top:25px;
+	top:35px;
 	left: 1px;
 }
 
-.submenubar ul {
-	position:absolute;
-	display: inline;
-  top:-20px;
-  list-style: none;
-  padding-left: 0px;
-  margin-bottom: 5px;
-}
-
 .submenubar ul li {
-  display: inline;
-	width: 80px;
-	height: 30px;
-	float: left;
-	text-align: center; 
-	vertical-align: text-bottom;
-  text-transform: lowercase;
-  font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;	
-	font-weight: bold;
-	font-style: italic;
-}
-
-.submenubar ul li a {
-  display: none;
-}
-
-.submenubar ul li ul li a {
-  display: inline;
-}
-
-.submenubar ul li ul {
-	width: 572px;
-	height: 20px;
-	position:absolute;
-	top:10px;
-	left: -5px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 9px;
-	color: #8E6D57;
-	text-decoration: none;
-	font-weight: bold;
-	border-bottom:0px;
-}
-
-/* these submenus aren't even visible from the current page */
-.submenubar ul li.page_item ul {
-  display: none;
-}
-
-/* but these submenus should be visible from the current page */
-.submenubar ul li.current_page_item ul {
-  display: block;
-}
-
-.submenubar ul li.current_page_ancestor ul {
-  display: block;
-}
-
-/* but these submenus should be visible from the current page */
-.submenubar ul li.current_page_item ul li {
-  width: 90px;
-  margin: 5px;
-  padding: 0px;
-}
-
-.submenubar ul li.current_page_ancestor ul li {
-  width: 90px;
-  margin: 5px;
-  padding: 0px;
-}
-
-/* visible but un-selected */
-.submenubar ul li.current_page_item ul li.page_item a {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #327898;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: lowercase;
-	border-bottom:0px;
-}
-
-.submenubar ul li.current_page_item ul li.page_item a:hover {
-	color: #983906;
-}
-
-/* visible and current */
-.submenubar ul li.current_page_item ul li.current_page_item a {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	color: #983906;
-	text-decoration: none;
-	font-weight: bold;
-	text-transform: lowercase;
-	border-bottom:0px;
-}
-
-.submenubar ul li.current_page_item ul li.current_page_item a:hover {
+  width: 100px;
+  margin-right: 23px;
+	
 }
 
 /* and, now, anything more than 2 levels deep on the menu */
-.submenubar ul li ul li ul li {
+.submenubar ul li ul li {
   display: none;
 }
 
@@ -308,6 +213,7 @@ p {
 	border: 1px solid #D96925;
 	line-height: 23px;
 }
+
 .header2 {
 	font-family: Arial, "Times New Roman", Times, serif;
 	font-size: 12px;
