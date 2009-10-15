@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Default_Theme
+ * @subpackage Avani_Theme
  */
 
 get_header(); ?>
@@ -28,15 +28,15 @@ get_header(); ?>
 		<?php endwhile; ?>
 
 		<div class="navigation">
-		  <table>
-		    <tbody>
-		      <tr>
-		        <td><div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div></td>
-		        <td><div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div></td>
-		      </tr>
-		    <tbody>
-	    </table>
-		</div>
+  	  <table>
+  	    <tbody>
+  	      <tr>
+  	        <td><div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div></td>
+  	        <td><div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div></td>
+  	      </tr>
+  	    <tbody>
+      </table>
+  	</div>
 
 	<?php else : ?>
 

@@ -6,14 +6,21 @@
 
 get_header();
 ?>
+<?php sitemap_area($post); ?>
 
 	<div id="content" class="widecolumn" role="main">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="navigation">
-			<div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
-			<div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
+		  <table>
+		    <tbody>
+		      <tr>
+		        <td><div class="alignleft"><?php previous_post_link('&laquo; %link')  ?></div></td>
+		        <td><div class="alignright"><?php next_post_link('%link &raquo;')  ?></div></td>
+		      </tr>
+		    <tbody>
+	    </table>
 		</div>
 
 		<div <?php post_class() ?> id="post-<?php the_ID(); ?>">

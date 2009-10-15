@@ -28,11 +28,16 @@ get_header();
 		<h2 class="pagetitle">Blog Archives</h2>
  	  <?php } ?>
 
-
 		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
+  	  <table>
+  	    <tbody>
+  	      <tr>
+  	        <td><div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div></td>
+  	        <td><div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div></td>
+  	      </tr>
+  	    <tbody>
+      </table>
+  	</div>
 
 		<?php while (have_posts()) : the_post(); ?>
 		<div <?php post_class() ?>>
@@ -50,9 +55,16 @@ get_header();
 		<?php endwhile; ?>
 
 		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
-		</div>
+  	  <table>
+  	    <tbody>
+  	      <tr>
+  	        <td><div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div></td>
+  	        <td><div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div></td>
+  	      </tr>
+  	    <tbody>
+      </table>
+  	</div>
+
 	<?php else :
 
 		if ( is_category() ) { // If this is a category archive

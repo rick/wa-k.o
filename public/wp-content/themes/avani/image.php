@@ -19,10 +19,17 @@ get_header();
 
 				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
 
-				<div class="navigation">
-					<div class="alignleft"><?php previous_image_link() ?></div>
-					<div class="alignright"><?php next_image_link() ?></div>
-				</div>
+    		<div class="navigation">
+      	  <table>
+      	    <tbody>
+      	      <tr>
+      	        <td><div class="alignleft"><?php previous_image_link() ?></div></td>
+      	        <td><div class="alignright"><?php next_image_link() ?></div></td>
+      	      </tr>
+      	    <tbody>
+          </table>
+      	</div>
+
 				<br class="clear" />
 
 				<p class="postmetadata alt">

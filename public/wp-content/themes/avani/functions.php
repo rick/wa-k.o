@@ -27,8 +27,6 @@ function sitemap_area($post, $title = '') {
         <a href="<?php echo $map->guid ?>" class="navigation">sitemap</a> 
         <?php echo get_breadcrumbs($post); ?>
       </div> 
-      <div class="content">
-		<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
   <?php
 }
 
@@ -66,6 +64,21 @@ function sitemap_divider() {
 
 function link_to_a_post($post) {
   return('<a class="navigation" href="'. $post->guid . '">'. $post->post_title . '</a>');
+}
+
+function show_navigation($left_link, $right_link) {
+  ?>
+  <div class="navigation">
+	  <table>
+	    <tbody>
+	      <tr>
+	        <td><div class="alignleft"><?php echo $left_link ?></div></td>
+	        <td><div class="alignright"><?php echo $right_link ?></div></td>
+	      </tr>
+	    <tbody>
+    </table>
+	</div>
+	<?php
 }
 
 /** @ignore */
