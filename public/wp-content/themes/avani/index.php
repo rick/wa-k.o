@@ -28,16 +28,21 @@ get_header(); ?>
 		<?php endwhile; ?>
 
 		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
-			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
+		  <table>
+		    <tbody>
+		      <tr>
+		        <td><div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div></td>
+		        <td><div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div></td>
+		      </tr>
+		    <tbody>
+	    </table>
 		</div>
 
 	<?php else : ?>
 
 		<h2 class="center">Not Found</h2>
 		<p class="center">Sorry, but you are looking for something that isn't here.</p>
-		<?php get_search_form(); ?>
-
+    
 	<?php endif; ?>
 
 	</div>
