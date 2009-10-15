@@ -5,6 +5,7 @@
  */
 
 get_header(); ?>
+  <?php sitemap_area($post); ?>
 
 	<div id="content" class="narrowcolumn" role="main">
 
@@ -34,6 +35,8 @@ get_header(); ?>
 			<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
 		</div>
 
+		<?php get_search_form(); ?>
+
 	<?php else : ?>
 
 		<h2 class="center">No posts found. Try a different search?</h2>
@@ -42,7 +45,5 @@ get_header(); ?>
 	<?php endif; ?>
 
 	</div>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
