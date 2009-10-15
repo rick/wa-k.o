@@ -65,7 +65,7 @@ function sitemap_divider() {
 }
 
 function link_to_a_post($post) {
-  return('<a href="'. $post->guid . '">'. $post->post_title . '</a>');
+  return('<a class="navigation" href="'. $post->guid . '">'. $post->post_title . '</a>');
 }
 
 /** @ignore */
