@@ -8,7 +8,7 @@ get_header(); ?>
 
 	<div id="content" class="narrowcolumn" role="main">
 
-  <?php sitemap_area('News & Events'); ?>
+  <?php sitemap_area('', 'News & Events'); ?>
 
 	<?php if (have_posts()) : ?>
 

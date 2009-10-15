@@ -15,7 +15,7 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
-function sitemap_area($title = '') {
+function sitemap_area($post, $title = '') {
   ?>
   <tr> 
     <td valign="top">
@@ -23,9 +23,8 @@ function sitemap_area($title = '') {
         <?php if($title) { echo $title; } else { the_title(); } ?>
       </div> 
       <div class="nav">
-        <a href="sitemap.htm" class="navigation">sitemap</a>
-        <span class="sitemapdivider">:</span> 
-        <a class="navigation" href="#">about us</a>
+        <a href="sitemap.htm" class="navigation">sitemap</a> 
+        <?php echo get_breadcrumbs($post); ?>
       </div> 
       <div class="content">
 		<?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
@@ -42,6 +41,31 @@ function get_submenu_content($post) {
       $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
   }
   return($children);
+}
+
+function get_breadcrumbs($post) {
+  $result = '';
+  $current = $post;
+
+  while($current != '') {
+    $result = link_to_a_post($current) . ($result ? (sitemap_divider() . $result) : '');
+    if ($current->post_parent && $current->post_parent != $current->ID) {
+      $current = get_post($current->post_parent);
+    } else {
+      $current = '';
+    }
+  }
+  
+  $result = ($result ? (sitemap_divider() . $result) : '');
+  return($result);
+}
+
+function sitemap_divider() {
+  return(' <span class="sitemapdivider"> : </span> ');
+}
+
+function link_to_a_post($post) {
+  return('<a href="'. $post->guid . '">'. $post->post_title . '</a>');
 }
 
 /** @ignore */
