@@ -16,6 +16,7 @@ if ( function_exists('register_sidebar') ) {
 }
 
 function sitemap_area($post, $title = '') {
+  $map = get_page_by_title('Site Map');
   ?>
   <tr> 
     <td valign="top">
@@ -23,7 +24,7 @@ function sitemap_area($post, $title = '') {
         <?php if($title) { echo $title; } else { the_title(); } ?>
       </div> 
       <div class="nav">
-        <a href="sitemap.htm" class="navigation">sitemap</a> 
+        <a href="<?php echo $map->guid ?>" class="navigation">sitemap</a> 
         <?php echo get_breadcrumbs($post); ?>
       </div> 
       <div class="content">
@@ -48,7 +49,8 @@ function get_breadcrumbs($post) {
   $current = $post;
 
   while($current != '') {
-    $result = link_to_a_post($current) . ($result ? (sitemap_divider() . $result) : '');
+    if ($current->post_title != 'Site Map')
+      $result = link_to_a_post($current) . ($result ? (sitemap_divider() . $result) : '');
     if ($current->post_parent && $current->post_parent != $current->ID) {
       $current = get_post($current->post_parent);
     } else {

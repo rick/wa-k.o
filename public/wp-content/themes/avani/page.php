@@ -10,6 +10,12 @@ get_header(); ?>
   <?php sitemap_area($post); ?>
 <?php endwhile; endif; ?>
 
+<?php if($post->post_title == 'Site Map') {?>
+<ul role="navigation">
+	<?php wp_list_pages('title_li='); ?>
+</ul>
+<?php } ?>
+
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
