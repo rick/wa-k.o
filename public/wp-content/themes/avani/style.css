@@ -329,6 +329,7 @@ td.colortable{
 }
 
 .navigation {
+  margin-top: 1em;
 }
 
 .navigation table {
@@ -339,11 +340,21 @@ td.colortable{
 .navigation .alignleft {
   font-family:Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
+  font-weight: bold;
   text-align: left;
 }
 
 .navigation .alignright {
   font-family:Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
+  font-weight: bold;
   text-align: right;
+}
+
+#searchform {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;  
 }

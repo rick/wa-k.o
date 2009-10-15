@@ -20,19 +20,32 @@
 <?php if ( have_comments() ) : ?>
 	<h3 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
-	<div class="navigation">
-		<div class="alignleft"><?php previous_comments_link() ?></div>
-		<div class="alignright"><?php next_comments_link() ?></div>
+  <div class="navigation">
+	  <table>
+	    <tbody>
+	      <tr>
+	        <td><div class="alignleft"><?php previous_comments_link() ?></div></td>
+	        <td><div class="alignright"><?php next_comments_link() ?></div></td>
+	      </tr>
+	    <tbody>
+    </table>
 	</div>
 
 	<ol class="commentlist">
 	<?php wp_list_comments(); ?>
 	</ol>
 
-	<div class="navigation">
-		<div class="alignleft"><?php previous_comments_link() ?></div>
-		<div class="alignright"><?php next_comments_link() ?></div>
+  <div class="navigation">
+	  <table>
+	    <tbody>
+	      <tr>
+	        <td><div class="alignleft"><?php previous_comments_link() ?></div></td>
+	        <td><div class="alignright"><?php next_comments_link() ?></div></td>
+	      </tr>
+	    <tbody>
+    </table>
 	</div>
+
  <?php else : // this is displayed if there are no comments so far ?>
 
 	<?php if ( comments_open() ) : ?>
@@ -81,7 +94,7 @@
 
 <!--<p><small><strong>XHTML:</strong> You can use these tags: <code><?php echo allowed_tags(); ?></code></small></p>-->
 
-<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+<p><textarea name="comment" id="comment" cols="70%" rows="10" tabindex="4"></textarea></p>
 
 <p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
 <?php comment_id_fields(); ?>
