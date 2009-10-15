@@ -215,6 +215,11 @@ body {
 .submenubar ul li.current_page_item ul li.current_page_item a:hover {
 }
 
+/* and, now, anything more than 2 levels deep on the menu */
+.submenubar ul li ul li ul li {
+  display: none;
+}
+
 /* sitemap, etc. */
 menubar ul li a.navigation {
 	font-family: Arial, Helvetica, sans-serif;
