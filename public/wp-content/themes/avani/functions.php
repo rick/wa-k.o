@@ -32,6 +32,18 @@ function sitemap_area($title = '') {
   <?php
 }
 
+function get_submenu_content($post) {
+  if($post->post_parent) {
+    $parent = get_post($post->post_parent, ARRAY_A);
+    if ($parent['post_title'] != 'Products')
+      $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+  } else {
+    if ($post->post_title != 'Products')
+      $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+  }
+  return($children);
+}
+
 /** @ignore */
 function kubrick_head() {
 	$head = "<style type='text/css'>\n<!--";

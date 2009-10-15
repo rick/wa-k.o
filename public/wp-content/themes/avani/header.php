@@ -35,15 +35,7 @@
                   </div> 
                   <div class="menubar submenubar"> 
                     <?php
-                      print_r($parent);
-                      if($post->post_parent) {
-                        $parent = get_post($post->post_parent, ARRAY_A);
-                        if ($parent['post_title'] != 'Products')
-                          $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
-                      } else {
-                        if ($post->post_title != 'Products')
-                          $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
-                      }
+                      $children = get_submenu_content($post);
                       if ($children) { ?>
                         <ul><?php echo $children; ?></ul><?php 
                       } ?>
