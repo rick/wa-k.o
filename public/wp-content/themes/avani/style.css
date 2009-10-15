@@ -306,3 +306,44 @@ tr.colortable{
 td.colortable{
 	width:10px;
 }
+
+.post {
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.post h2 {
+  font-size: 15px;
+}
+
+.post .entry {
+  font-size: 10px;
+}
+
+.post .postmetadata {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.navigation {
+}
+
+.navigation table {
+  width: 75%;
+  margin-left: 5%;
+}
+
+.navigation .alignleft {
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+
+.navigation .alignright {
+  font-family:Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: right;
+}
