@@ -21,7 +21,7 @@
   <tr> 
     <td><table width="770" height="600" border="0" cellspacing="0" cellpadding="0"> 
         <tr> 
-          <td width="170" valign="top"><a href="/" class="menu"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo2.gif" alt="about us" width="170" height="212" border="0"></a></td> 
+          <td id="logo" width="170" valign="top"><a href="/" class="menu"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo2.gif" alt="about us" width="170" height="212" border="0"></a></td> 
           <td width="600" valign="top"><table width="600" border="0" cellspacing="0" cellpadding="0"> 
               <tr> 
                 <td height="187" valign="top" background="<?php bloginfo('stylesheet_directory'); ?>/images/line4.gif">
