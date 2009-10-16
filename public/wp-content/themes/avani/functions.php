@@ -24,7 +24,7 @@ function sitemap_area($post, $title = '') {
         <?php if($title) { echo $title; } else { the_title(); } ?>
       </div> 
       <div class="nav">
-        <a href="<?php echo $map->guid ?>" class="navigation">sitemap</a> 
+        <a href="<?php echo get_permalink($map->ID) ?>" class="navigation">sitemap</a> 
         <?php echo get_breadcrumbs($post); ?>
       </div> 
   <?php
@@ -63,23 +63,9 @@ function sitemap_divider() {
 }
 
 function link_to_a_post($post) {
-  return('<a class="navigation" href="'. $post->guid . '">'. $post->post_title . '</a>');
+  return('<a class="navigation" href="'. get_permalink($post->ID) . '">'. $post->post_title . '</a>');
 }
 
-function show_navigation($left_link, $right_link) {
-  ?>
-  <div class="navigation">
-	  <table>
-	    <tbody>
-	      <tr>
-	        <td><div class="alignleft"><?php echo $left_link ?></div></td>
-	        <td><div class="alignright"><?php echo $right_link ?></div></td>
-	      </tr>
-	    <tbody>
-    </table>
-	</div>
-	<?php
-}
 
 /** @ignore */
 function kubrick_head() {
