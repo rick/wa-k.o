@@ -31,6 +31,8 @@ function sitemap_area($post, $title = '') {
 }
 
 function get_submenu_content($post) {
+  if (!$post)
+    return('');
   if($post->post_parent) {
     $parent = get_post($post->post_parent, ARRAY_A);
     $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
