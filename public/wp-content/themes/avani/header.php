@@ -26,7 +26,7 @@
               <tr> 
                 <td height="187" valign="top" background="<?php bloginfo('stylesheet_directory'); ?>/images/line4.gif">
                   <div align="center">
-                    <a href="products.htm" class="menu"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/banner.jpg" width="468" height="60" border="0"></a> 
+                    <a href="<?php echo get_permalink(get_page_by_title('Products')); ?>" class="menu"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/banner.jpg" width="468" height="60" border="0"></a> 
                   </div> 
                   <div class="menubar"> 
                     <ul>
