@@ -217,6 +217,7 @@ p {
 	text-indent: 10px;
 	text-align: left;
 	font-variant: small-caps;
+  text-transform: lowercase;
 	font-style: normal;
 	font-weight: bold;
 	letter-spacing: 2px;
