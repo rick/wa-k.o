@@ -9,17 +9,19 @@ get_header(); ?>
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   <?php sitemap_area($post); ?>
   <div class="content">
-  <?php the_content('<p class="serif">Read the rest of this page &raquo;</p>'); ?>
+    <?php 
+    if($post->post_tiale == 'Site Map') {?>
+    <ul role="navigation">
+    	<?php wp_list_pages('title_li='); ?>
+    </ul>
+    <?php 
+    } else { 
+     the_content('<p class="serif">Read the rest of this page &raquo;</p>');
+    } ?>
   </div>
 <?php endwhile; endif; ?>
 
 
-
-<?php if($post->post_title == 'Site Map') {?>
-<ul role="navigation">
-	<?php wp_list_pages('title_li='); ?>
-</ul>
-<?php } ?>
 
 <?php get_search_form(); ?>
 
