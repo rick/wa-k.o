@@ -17,19 +17,7 @@
                             <td align="left" valign="top"> 
                               <table width="67%" border="0" cellspacing="0" cellpadding="0">
                                 <tr> 
-                                  <td align="left" valign="top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/indava01.jpg" width="172" height="117"></td>
-                                </tr>
-                                <tr> 
-                                  <td bgcolor="#FF9933" height="62" align="left" valign="top" class="bdy"> 
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                      <tr> 
-                                        <td class="bdy" align="left" valign="top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/s-quote.gif" width="8" height="12">All 
-                                          our activities support the environment 
-                                          and the people of the area where we 
-                                          are working.<img src="<?php bloginfo('stylesheet_directory'); ?>/images/e-quote.gif" width="8" height="12"></td>
-                                      </tr>
-                                    </table>
-                                  </td>
+                                <td align="left" valign="top"><?php echo right_image($post->post_title, 1); ?></td>
                                 </tr>
                               </table>
                             </td>
@@ -41,18 +29,7 @@
                             <td align="left" valign="top"> 
                               <table width="67%" border="0" cellspacing="0" cellpadding="0">
                                 <tr> 
-                                  <td align="left" valign="top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/indava05.jpg" width="170" height="172"></td>
-                                </tr>
-                                <tr> 
-                                  <td bgcolor="#FF6600" height="62"> 
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                      <tr> 
-                                        <td class="bdy" align="left" valign="top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/s-quote.gif" width="8" height="12">More 
-                                          than 1500 families in 228 remote hamlets 
-                                          and villages are now using solar lights.<img src="<?php bloginfo('stylesheet_directory'); ?>/images/e-quote.gif" width="8" height="12"></td>
-                                      </tr>
-                                    </table>
-                                  </td>
+                                <td align="left" valign="top"><?php echo right_image($post->post_title, 2); ?></td>
                                 </tr>
                               </table>
                             </td>
@@ -64,20 +41,7 @@
                             <td align="left" valign="top"> 
                               <table width="67%" border="0" cellspacing="0" cellpadding="0">
                                 <tr> 
-                                  <td align="left" valign="top" height="126"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/indava06.jpg" width="172" height="129"></td>
-                                </tr>
-                                <tr> 
-                                  <td bgcolor="#CC9966" height="62" align="left" valign="top"> 
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="10">
-                                      <tr> 
-                                        <td class="bdy" align="left" valign="top"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/s-quote.gif" width="8" height="12">Our 
-                                          colour palette in wool and silk in natural 
-                                          dyes is now quite extensive. We are 
-                                          continuously researching on new dye 
-                                          yielding plants<img src="<?php bloginfo('stylesheet_directory'); ?>/images/e-quote.gif" width="8" height="12"></td>
-                                      </tr>
-                                    </table>
-                                  </td>
+                                <td align="left" valign="top"><?php echo right_image($post->post_title, 3); ?></td>
                                 </tr>
                               </table>
                             </td>

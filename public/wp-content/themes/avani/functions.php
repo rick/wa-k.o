@@ -15,6 +15,39 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
+function right_image($title, $position) {
+  $cleaned_title = strtolower(preg_replace('/[^a-zA-Z0-9_]+/', '-', $title));
+  $filename = $cleaned_title . '-' . $position . '.png';
+  echo "<!-- can display [$filename] here -->";
+  $base = get_option( 'upload_path' );
+  $found = find_image_file($base, $filename);
+  $relative = preg_replace('!'.get_option('upload_path').'!', '/wp-content/uploads', $found);
+  if ($found) { 
+    return('<img width="172" height="117" src="'.$relative.'">');
+  } else {
+    return('<img src="'.get_bloginfo('stylesheet_directory') . '/images/empty.png">');
+  }
+}
+
+function find_image_file($dir, $filename) {
+  if ($handle = opendir($dir)) {
+      while (false !== ($file = readdir($handle))) {
+        if ($file == '.' or $file == '..') { 
+          false; 
+        } else if ($file == $filename) {
+          return ($dir . '/' . $file);
+        } elseif (is_dir($dir . '/' . $file)) {
+          $result = find_image_file($dir . '/' . $file, $filename);
+          if ($result) {
+            return($result);
+          }
+        }
+      }
+      closedir($handle);
+    }
+  return false;
+}
+
 function sitemap_area($post, $title = '') {
   $map = get_page_by_title('Site Map');
   ?>
