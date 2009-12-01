@@ -67,7 +67,7 @@
                           <tr> 
                             <td class="pgttl" height="10" width="1%" bgcolor="#CC6633">&nbsp;</td>
                             <!-- PAGE TITLE -->
-                            <td class="pgttl" height="10" width="93%" align="left" valign="middle" bgcolor="#CC6633"><?php if($title) { echo $title; } else { the_title(); } ?> </td>
+                            <td class="pgttl" height="10" width="93%" align="left" valign="middle" bgcolor="#CC6633"><?php if($post->post_type == 'post') { echo 'News and Events'; } else { the_title(); } ?> </td>
                           </tr>
                         </table>
                       </td>
