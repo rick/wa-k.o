@@ -19,7 +19,6 @@
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 <?php wp_head(); ?>
 </head>
-
 <body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" <?php body_class(); ?>>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="bgimg02">
   <tr>
@@ -48,7 +47,8 @@
                     <tr> 
                       <td align="left" valign="bottom"> 
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                          <tr align="center" valign="middle"> 
+                          <tr align="center" valign="middle">
+                            <!-- menu links -->
                             <td width="19%" class="subnav">&nbsp;</td>
                             <td width="1%">&nbsp;</td>
                             <td width="19%" class="subnav">&nbsp;</td>
@@ -71,8 +71,8 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="2">
                           <tr> 
                             <td class="pgttl" height="10" width="1%" bgcolor="#CC6633">&nbsp;</td>
-                            <td class="pgttl" height="10" width="93%" align="left" valign="middle" bgcolor="#CC6633">ABOUT 
-                              US </td>
+                            <!-- PAGE TITLE -->
+                            <td class="pgttl" height="10" width="93%" align="left" valign="middle" bgcolor="#CC6633">ABOUT US </td>
                           </tr>
                         </table>
                       </td>
@@ -86,6 +86,7 @@
                 <td width="48%"> 
                   <table width="100%" border="0" cellspacing="0" cellpadding="5">
                     <tr> 
+                      <!-- BREAD CRUMBS -->
                       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CC6633">Home 
                         :: About US</font></td>
                     </tr>
@@ -110,25 +111,25 @@
                       <td align="left" valign="top" height="166" width="67%"> 
                         <table width="0%" border="0" cellspacing="0" cellpadding="0">
                           <tr> 
-                            <td width="70%" height="20"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-abc.jpg" width="161" height="25"></td>
+                            <td width="70%" height="20"><a href="<?php echo get_permalink(get_page_by_title('About Us')); ?>"><img class="menubutton" src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-abc.jpg" width="161" height="25"></a></td>
                           </tr>
                           <tr> 
-                            <td width="70%"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-nec.jpg" width="161" height="25"></td>
+                            <td width="70%"><a href="<?php echo get_permalink(get_page_by_title('News & Events')); ?>"><img class="menubutton" src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-nec.jpg" width="161" height="25"></a></td>
                           </tr>
                           <tr> 
-                            <td width="70%"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-rec.jpg" width="161" height="27"></td>
+                            <td width="70%"><a href="<?php echo get_permalink(get_page_by_title('Renewable Energy')); ?>"><img class="menubutton" src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-rec.jpg" width="161" height="27"></a></a></td>
                           </tr>
                           <tr> 
-                            <td width="70%" height="2"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-wmc.jpg" width="161" height="26"></td>
+                            <td width="70%" height="2"><a href="<?php echo get_permalink(get_page_by_title('Water Management')); ?>"><img class="menubutton" src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-wmc.jpg" width="161" height="26"></a></td>
                           </tr>
                           <tr> 
-                            <td width="70%"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-fac.jpg" width="161" height="27"></td>
+                            <td width="70%"><a href="<?php echo get_permalink(get_page_by_title('Farm Based Activities')); ?>"><img class="menubutton" src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-fac.jpg" width="161" height="27"></a></td>
                           </tr>
                           <tr> 
-                            <td width="70%"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-txc.jpg" width="161" height="26"></td>
+                            <td width="70%"><a href="<?php echo get_permalink(get_page_by_title('Textiles')); ?>"><img class="menubutton" src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-txc.jpg" width="161" height="26"></a></td>
                           </tr>
                           <tr> 
-                            <td width="70%" height="2"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-prc.jpg" width="161" height="25"></td>
+                            <td width="70%" height="2"><a href="<?php $other_page = get_page_by_title('Products'); print(get_page_link($other_page->ID)); ?>"><img class="menubutton" src="<?php bloginfo('stylesheet_directory'); ?>/images/mainnav-prc.jpg" width="161" height="25"></a></td>
                           </tr>
                         </table>
                       </td>
@@ -148,3 +149,12 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                           <tr> 
                             <td height="27" align="left" valign="top" class="bdytxt">
+
+
+                  <div class="menubar submenubar"> 
+                    <?php
+                      $children = get_submenu_content($post);
+                      if ($children) { ?>
+                        <ul><?php echo $children; ?></ul><?php 
+                      } ?>
+                  </div> 
