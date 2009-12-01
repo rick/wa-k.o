@@ -10,8 +10,6 @@ Template Name: Archives
 
 <?php get_header(); ?>
 
-<div id="content" class="widecolumn">
-
 <?php get_search_form(); ?>
 
 <h2>Archives by Month:</h2>
@@ -23,7 +21,5 @@ Template Name: Archives
 	<ul>
 		 <?php wp_list_categories(); ?>
 	</ul>
-
-</div>
 
 <?php get_footer(); ?>

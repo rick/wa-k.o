@@ -7,8 +7,6 @@
 get_header(); ?>
   <?php sitemap_area($post); ?>
 
-	<div id="content" class="narrowcolumn" role="main">
-
 	<?php if (have_posts()) : ?>
 
 		<h2 class="pagetitle">Search Results</h2>
@@ -54,7 +52,5 @@ get_header(); ?>
 		<?php get_search_form(); ?>
 
 	<?php endif; ?>
-
-	</div>
 
 <?php get_footer(); ?>

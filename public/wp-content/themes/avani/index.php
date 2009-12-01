@@ -6,8 +6,6 @@
 
 get_header(); ?>
 
-	<div id="content" class="narrowcolumn" role="main">
-
   <?php sitemap_area('', 'News & Events'); ?>
 
 	<?php if (have_posts()) : ?>
@@ -44,9 +42,5 @@ get_header(); ?>
 		<p class="center">Sorry, but you are looking for something that isn't here.</p>
     
 	<?php endif; ?>
-
-	</div>
-
-<?php get_search_form(); ?>
 
 <?php get_footer(); ?>

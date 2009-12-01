@@ -7,8 +7,6 @@
 get_header();
 ?>
 
-	<div id="content" class="widecolumn">
-
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="post" id="post-<?php the_ID(); ?>">
@@ -71,7 +69,5 @@ get_header();
 		<p>Sorry, no attachments matched your criteria.</p>
 
 <?php endif; ?>
-
-	</div>
 
 <?php get_footer(); ?>

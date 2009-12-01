@@ -7,8 +7,6 @@
 get_header();
 ?>
 
-	<div id="content" class="narrowcolumn" role="main">
-
 		<?php if (have_posts()) : ?>
 
  	  <?php $post = $posts[0]; // Hack. Set $post so that the_date() works. ?>
@@ -81,7 +79,5 @@ get_header();
 
 	endif;
 ?>
-
-	</div>
 
 <?php get_footer(); ?>

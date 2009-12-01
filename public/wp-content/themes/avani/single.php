@@ -8,8 +8,6 @@ get_header();
 ?>
 <?php sitemap_area($post); ?>
 
-	<div id="content" class="widecolumn" role="main">
-
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<div class="navigation">
@@ -74,7 +72,5 @@ get_header();
 		<p>Sorry, no posts matched your criteria.</p>
 
 <?php endif; ?>
-
-	</div>
 
 <?php get_footer(); ?>
