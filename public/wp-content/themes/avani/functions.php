@@ -35,10 +35,21 @@ function get_submenu_content($post) {
     return('');
   if($post->post_parent) {
     $parent = get_post($post->post_parent, ARRAY_A);
-    $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+    $children = wp_list_pages("depth=1&title_li=&child_of=".$post->post_parent."&echo=0");
   } else {
-    $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+    $children = wp_list_pages("depth=1&title_li=&child_of=".$post->ID."&echo=0");
   }
+  
+  // now, let's transform $children into something we can use
+  $children = preg_replace('/<li [^>]*>/', '<td width="19%" class="subnav">', $children);
+  $children = preg_replace('/<\/li>/', '</td>@@@', $children);
+  $children = preg_replace('/@@@$/', '', $children);
+  $pieces = explode('@@@', $children);
+  if (count($pieces) < 5) {
+    $children = str_repeat('<td width="19%" class="subnav">&nbsp;</td><td width="1%">&nbsp;</td>', 5 - count($pieces)).$children;
+  }
+  $children = preg_replace('/@@@/', '<td width="0%"><img src="'.get_bloginfo("stylesheet_directory").'/images/sndiv.gif" width="3" height="18"></td>', $children);
+  
   return($children);
 }
 

@@ -49,16 +49,11 @@
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                           <tr align="center" valign="middle">
                             <!-- menu links -->
-                            <td width="19%" class="subnav">&nbsp;</td>
-                            <td width="1%">&nbsp;</td>
-                            <td width="19%" class="subnav">&nbsp;</td>
-                            <td width="0%">&nbsp;</td>
-                            <td width="19%" class="subnav">&nbsp;</td>
-                            <td width="0%">&nbsp;</td>
-                            <td width="19%" class="subnav">annual<br>
-                              reports</td>
-                            <td width="0%"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/sndiv.gif" width="3" height="18"></td>
-                            <td width="19%" class="subnav">maps</td>
+                            <?php
+                              $children = get_submenu_content($post);
+                              if ($children) { 
+                                echo $children;
+                              } ?>
                           </tr>
                         </table>
                       </td>
@@ -87,7 +82,8 @@
                   <table width="100%" border="0" cellspacing="0" cellpadding="5">
                     <tr> 
                       <!-- BREAD CRUMBS -->
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CC6633">Home 
+                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CC6633">
+                        Home 
                         :: About US</font></td>
                     </tr>
                   </table>
@@ -150,11 +146,3 @@
                           <tr> 
                             <td height="27" align="left" valign="top" class="bdytxt">
 
-
-                  <div class="menubar submenubar"> 
-                    <?php
-                      $children = get_submenu_content($post);
-                      if ($children) { ?>
-                        <ul><?php echo $children; ?></ul><?php 
-                      } ?>
-                  </div> 
