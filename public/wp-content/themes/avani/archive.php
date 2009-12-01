@@ -75,7 +75,6 @@ get_header();
 		} else {
 			echo("<h2 class='center'>No posts found.</h2>");
 		}
-		get_search_form();
 
 	endif;
 ?>
