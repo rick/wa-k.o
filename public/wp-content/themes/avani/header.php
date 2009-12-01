@@ -67,7 +67,7 @@
                           <tr> 
                             <td class="pgttl" height="10" width="1%" bgcolor="#CC6633">&nbsp;</td>
                             <!-- PAGE TITLE -->
-                            <td class="pgttl" height="10" width="93%" align="left" valign="middle" bgcolor="#CC6633">ABOUT US </td>
+                            <td class="pgttl" height="10" width="93%" align="left" valign="middle" bgcolor="#CC6633"><?php if($title) { echo $title; } else { the_title(); } ?> </td>
                           </tr>
                         </table>
                       </td>
@@ -83,8 +83,8 @@
                     <tr> 
                       <!-- BREAD CRUMBS -->
                       <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CC6633">
-                        Home 
-                        :: About US</font></td>
+                        <a href="/" class="navigation">Home</a> <?php echo get_breadcrumbs($post); ?>
+                      </font></td>
                     </tr>
                   </table>
                 </td>

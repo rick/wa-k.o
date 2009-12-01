@@ -72,7 +72,7 @@ function get_breadcrumbs($post) {
 }
 
 function sitemap_divider() {
-  return(' <span class="sitemapdivider"> : </span> ');
+  return(' <span class="sitemapdivider"> :: </span> ');
 }
 
 function link_to_a_post($post) {
