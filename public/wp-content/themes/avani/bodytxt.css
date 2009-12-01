@@ -4,3 +4,35 @@
 .more { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 9px; line-height: 18px; text-decoration: none; text-align: right; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; color: #666666 }
 
 .menubutton { border: none;}
+
+td.breadcrumbs {
+  font-size: 10px; 
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #cc6633;
+  font-weight: normal;
+  text-transform:none; 
+}
+
+td.breadcrumbs a {
+  font-size: 10px; 
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #cc6633;
+  font-weight: normal;
+  text-transform:none; 
+}
+
+.ecbar {
+  color:#ffc;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:bold;
+  line-height:normal;
+  text-decoration:none;
+  text-transform:none;
+}
+
+a {  
+  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: normal; line-height: normal; font-weight: bold; font-variant: normal; text-transform: lowercase; color: #CC6633; text-decoration: none}
+

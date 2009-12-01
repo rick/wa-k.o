@@ -82,9 +82,9 @@
                   <table width="100%" border="0" cellspacing="0" cellpadding="5">
                     <tr> 
                       <!-- BREAD CRUMBS -->
-                      <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="#CC6633">
+                      <td class="breadcrumbs">
                         <a href="/" class="navigation">Home</a> <?php echo get_breadcrumbs($post); ?>
-                      </font></td>
+                      </td>
                     </tr>
                   </table>
                 </td>
