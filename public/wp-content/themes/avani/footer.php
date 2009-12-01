@@ -285,7 +285,10 @@
                     </tr>
                     <tr>
                       <td align="left" valign="top" class="bdytxt">&copy; 2010 
-                        Avani-Kumaon.org - Volunteer Information - Sitemap - Feedback 
+                        <a href="/">Avani-Kumaon.org</a> - 
+                        <a href="<?php echo get_permalink(get_page_by_title('Volunteer Information')); ?>">Volunteer Information</a> - 
+                        <a href="<?php echo get_permalink(get_page_by_title('Site Map')); ?>">Sitemap</a> - 
+                        <a href="<?php echo get_permalink(get_page_by_title('Feedback')); ?>">Feedback</a> 
                       </td>
                     </tr>
                     <tr>
