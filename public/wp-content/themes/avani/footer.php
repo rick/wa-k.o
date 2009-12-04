@@ -8,6 +8,10 @@
                           </tr>
                         </table>
                       </td>
+                      <?php $image1 = right_image($post->post_title, 1); ?>
+                      <?php $image2 = right_image($post->post_title, 2); ?>
+                      <?php $image3 = right_image($post->post_title, 3); ?>
+                      <?php if ($image1 or $image2 or $image3) { ?>
                       <td width="33%" align="left" valign="top" height="1067"> 
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                           <tr> 
@@ -48,6 +52,7 @@
                           </tr>
                         </table>
                       </td>
+                      <?php } ?>
                     </tr>
                   </table>
                 </td>
