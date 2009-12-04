@@ -17,15 +17,15 @@ if ( function_exists('register_sidebar') ) {
 
 function right_image($title, $position) {
   $cleaned_title = strtolower(preg_replace('/[^a-zA-Z0-9_]+/', '-', $title));
-  $filename = $cleaned_title . '-' . $position . '.png';
+  $filename = $cleaned_title . '-' . $position . '.jpg';
   echo "<!-- can display [$filename] here -->";
   $base = get_option( 'upload_path' );
   $found = find_image_file($base, $filename);
   $relative = preg_replace('!'.get_option('upload_path').'!', '/wp-content/uploads', $found);
   if ($found) { 
-    return('<img width="172" height="117" src="'.$relative.'">');
+    return('<img width="172" src="'.$relative.'">');
   } else {
-    return('<img src="'.get_bloginfo('stylesheet_directory') . '/images/empty.png">');
+    return('');
   }
 }
 
